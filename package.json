@@ -1,6 +1,6 @@
 {
   "name": "@healthcare-interoperability/hl7v2-datatypes",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Datatype module for HL7v2 message generation and parsing library",
   "main": "dist/index.js",
   "scripts": {
