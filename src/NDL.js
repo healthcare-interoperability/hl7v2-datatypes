@@ -16,7 +16,7 @@ export class NDL extends ComplexDataType {
             ],
             position: 1,
         },
-        OpName: { aliasOf: 'Name' },
+        OPName: { aliasOf: 'Name' },
         StartDateTime: {
             defaultDataType: TS,
             dataTypes: [
@@ -90,11 +90,11 @@ export class NDL extends ComplexDataType {
         this.setComponentValue('Name', value);
     }
 
-    get OpName() {
+    get OPName() {
         return this.getComponent('Name');
     }
 
-    set OpName(value) {
+    set OPName(value) {
         this.setComponentValue('Name', value);
     }
 

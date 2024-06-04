@@ -15,6 +15,7 @@ export class RP extends ComplexDataType {
             dataTypes: [{ dataType: HD, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
             position: 2,
         },
+        ApplicationID: { aliasOf: 'ApplicationId' },
         TypeOfData: {
             defaultDataType: ID,
             dataTypes: [{ dataType: ID, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -46,6 +47,14 @@ export class RP extends ComplexDataType {
     }
 
     set ApplicationId(value) {
+        this.setComponentValue('ApplicationId', value);
+    }
+
+    get ApplicationID() {
+        return this.getComponent('ApplicationId');
+    }
+
+    set ApplicationID(value) {
         this.setComponentValue('ApplicationId', value);
     }
 

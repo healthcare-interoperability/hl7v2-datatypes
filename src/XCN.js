@@ -17,6 +17,7 @@ export class XCN extends ComplexDataType {
             dataTypes: [{ dataType: ST, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
             position: 1,
         },
+        IDNumber: { aliasOf: 'PersonIdentifier' },
         IdNumber: { aliasOf: 'PersonIdentifier' },
         FamilyName: {
             defaultDataType: FN,
@@ -102,7 +103,7 @@ export class XCN extends ComplexDataType {
             dataTypes: [{ dataType: HD, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
             position: 14,
         },
-        AssigningFacilityId: { aliasOf: 'AssigningFacility' },
+        AssigningFacilityID: { aliasOf: 'AssigningFacility' },
         NameRepresentationCode: {
             defaultDataType: ID,
             dataTypes: [{ dataType: ID, versions: ['2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1', '2.8'] }],
@@ -210,6 +211,14 @@ export class XCN extends ComplexDataType {
     }
 
     set PersonIdentifier(value) {
+        this.setComponentValue('PersonIdentifier', value);
+    }
+
+    get IDNumber() {
+        return this.getComponent('PersonIdentifier');
+    }
+
+    set IDNumber(value) {
         this.setComponentValue('PersonIdentifier', value);
     }
 
@@ -381,11 +390,11 @@ export class XCN extends ComplexDataType {
         this.setComponentValue('AssigningFacility', value);
     }
 
-    get AssigningFacilityId() {
+    get AssigningFacilityID() {
         return this.getComponent('AssigningFacility');
     }
 
-    set AssigningFacilityId(value) {
+    set AssigningFacilityID(value) {
         this.setComponentValue('AssigningFacility', value);
     }
 

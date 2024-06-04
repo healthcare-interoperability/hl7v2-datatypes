@@ -12,6 +12,7 @@ export class PT extends ComplexDataType {
             ],
             position: 1,
         },
+        ProcessingID: { aliasOf: 'ProcessingId' },
         ProcessingMode: {
             defaultDataType: ID,
             dataTypes: [
@@ -33,6 +34,14 @@ export class PT extends ComplexDataType {
     }
 
     set ProcessingId(value) {
+        this.setComponentValue('ProcessingId', value);
+    }
+
+    get ProcessingID() {
+        return this.getComponent('ProcessingId');
+    }
+
+    set ProcessingID(value) {
         this.setComponentValue('ProcessingId', value);
     }
 

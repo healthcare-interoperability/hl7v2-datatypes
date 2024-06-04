@@ -7,7 +7,7 @@ import { ST } from './ST';
 
 export class CM_NDL extends ComplexDataType {
     static components = {
-        OpName: {
+        OPName: {
             defaultDataType: CN,
             dataTypes: [{ dataType: CN, versions: ['2.3'] }],
             position: 1,
@@ -64,18 +64,18 @@ export class CM_NDL extends ComplexDataType {
         },
     };
 
-    static componentsByIndex = ['', 'OpName', 'StartDateTime', 'EndDateTime', 'PointOfCare', 'Room', 'Bed', 'Facility', 'LocationStatus', 'PersonLocationType', 'Building', 'Floor'];
+    static componentsByIndex = ['', 'OPName', 'StartDateTime', 'EndDateTime', 'PointOfCare', 'Room', 'Bed', 'Facility', 'LocationStatus', 'PersonLocationType', 'Building', 'Floor'];
 
     constructor(values, configs, isSubComponent = false) {
         super(values, configs, isSubComponent);
     }
 
-    get OpName() {
-        return this.getComponent('OpName');
+    get OPName() {
+        return this.getComponent('OPName');
     }
 
-    set OpName(value) {
-        this.setComponentValue('OpName', value);
+    set OPName(value) {
+        this.setComponentValue('OPName', value);
     }
 
     get StartDateTime() {

@@ -5,7 +5,7 @@ import { CE } from './CE';
 
 export class CM_ELD extends ComplexDataType {
     static components = {
-        SegmentId: {
+        SegmentID: {
             defaultDataType: ST,
             dataTypes: [{ dataType: ST, versions: ['2.3'] }],
             position: 1,
@@ -27,18 +27,18 @@ export class CM_ELD extends ComplexDataType {
         },
     };
 
-    static componentsByIndex = ['', 'SegmentId', 'Sequence', 'FieldPosition', 'CodeIdentifyingError'];
+    static componentsByIndex = ['', 'SegmentID', 'Sequence', 'FieldPosition', 'CodeIdentifyingError'];
 
     constructor(values, configs, isSubComponent = false) {
         super(values, configs, isSubComponent);
     }
 
-    get SegmentId() {
-        return this.getComponent('SegmentId');
+    get SegmentID() {
+        return this.getComponent('SegmentID');
     }
 
-    set SegmentId(value) {
-        this.setComponentValue('SegmentId', value);
+    set SegmentID(value) {
+        this.setComponentValue('SegmentID', value);
     }
 
     get Sequence() {

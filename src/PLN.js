@@ -11,6 +11,7 @@ export class PLN extends ComplexDataType {
             dataTypes: [{ dataType: ST, versions: ['2.8', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
             position: 1,
         },
+        IDNumber: { aliasOf: 'IdNumber' },
         TypeOfIdNumber: {
             defaultDataType: CWE,
             dataTypes: [
@@ -19,6 +20,7 @@ export class PLN extends ComplexDataType {
             ],
             position: 2,
         },
+        TypeOfIDNumber: { aliasOf: 'TypeOfIdNumber' },
         StateOtherQualifyingInformation: {
             defaultDataType: ST,
             dataTypes: [{ dataType: ST, versions: ['2.8', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -46,11 +48,27 @@ export class PLN extends ComplexDataType {
         this.setComponentValue('IdNumber', value);
     }
 
+    get IDNumber() {
+        return this.getComponent('IdNumber');
+    }
+
+    set IDNumber(value) {
+        this.setComponentValue('IdNumber', value);
+    }
+
     get TypeOfIdNumber() {
         return this.getComponent('TypeOfIdNumber');
     }
 
     set TypeOfIdNumber(value) {
+        this.setComponentValue('TypeOfIdNumber', value);
+    }
+
+    get TypeOfIDNumber() {
+        return this.getComponent('TypeOfIdNumber');
+    }
+
+    set TypeOfIDNumber(value) {
         this.setComponentValue('TypeOfIdNumber', value);
     }
 

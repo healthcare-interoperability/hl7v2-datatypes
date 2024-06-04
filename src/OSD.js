@@ -16,21 +16,23 @@ export class OSD extends ComplexDataType {
             dataTypes: [{ dataType: ST, versions: ['2.4', '2.5', '2.5.1', '2.6', '2.7'] }],
             position: 2,
         },
-        PlacerOrderNumberNamespaceId: {
+        PlacerOrderNumberNamespaceID: {
             defaultDataType: IS,
             dataTypes: [{ dataType: IS, versions: ['2.4', '2.5', '2.5.1', '2.6', '2.7'] }],
             position: 3,
         },
+        PlacerOrderNumberNamespaceId: { aliasOf: 'PlacerOrderNumberNamespaceID' },
         FillerOrderNumberEntityIdentifier: {
             defaultDataType: ST,
             dataTypes: [{ dataType: ST, versions: ['2.4', '2.5', '2.5.1', '2.6', '2.7'] }],
             position: 4,
         },
-        FillerOrderNumberNamespaceId: {
+        FillerOrderNumberNamespaceID: {
             defaultDataType: IS,
             dataTypes: [{ dataType: IS, versions: ['2.4', '2.5', '2.5.1', '2.6', '2.7'] }],
             position: 5,
         },
+        FillerOrderNumberNamespaceId: { aliasOf: 'FillerOrderNumberNamespaceID' },
         SequenceConditionValue: {
             defaultDataType: ST,
             dataTypes: [{ dataType: ST, versions: ['2.4', '2.5', '2.5.1', '2.6', '2.7'] }],
@@ -41,41 +43,45 @@ export class OSD extends ComplexDataType {
             dataTypes: [{ dataType: NM, versions: ['2.4', '2.5', '2.5.1', '2.6', '2.7'] }],
             position: 7,
         },
-        PlacerOrderNumberUniversalId: {
+        PlacerOrderNumberUniversalID: {
             defaultDataType: ST,
             dataTypes: [{ dataType: ST, versions: ['2.4', '2.5', '2.5.1', '2.6', '2.7'] }],
             position: 8,
         },
-        PlacerOrderNumberUniversalIdType: {
+        PlacerOrderNumberUniversalId: { aliasOf: 'PlacerOrderNumberUniversalID' },
+        PlacerOrderNumberUniversalIDType: {
             defaultDataType: ID,
             dataTypes: [{ dataType: ID, versions: ['2.4', '2.5', '2.5.1', '2.6', '2.7'] }],
             position: 9,
         },
-        FillerOrderNumberUniversalId: {
+        PlacerOrderNumberUniversalIdType: { aliasOf: 'PlacerOrderNumberUniversalIDType' },
+        FillerOrderNumberUniversalID: {
             defaultDataType: ST,
             dataTypes: [{ dataType: ST, versions: ['2.4', '2.5', '2.5.1', '2.6', '2.7'] }],
             position: 10,
         },
-        FillerOrderNumberUniversalIdType: {
+        FillerOrderNumberUniversalId: { aliasOf: 'FillerOrderNumberUniversalID' },
+        FillerOrderNumberUniversalIDType: {
             defaultDataType: ID,
             dataTypes: [{ dataType: ID, versions: ['2.4', '2.5', '2.5.1', '2.6', '2.7'] }],
             position: 11,
         },
+        FillerOrderNumberUniversalIdType: { aliasOf: 'FillerOrderNumberUniversalIDType' },
     };
 
     static componentsByIndex = [
         '',
         'SequenceResultsFlag',
         'PlacerOrderNumberEntityIdentifier',
-        'PlacerOrderNumberNamespaceId',
+        'PlacerOrderNumberNamespaceID',
         'FillerOrderNumberEntityIdentifier',
-        'FillerOrderNumberNamespaceId',
+        'FillerOrderNumberNamespaceID',
         'SequenceConditionValue',
         'MaximumNumberOfRepeats',
-        'PlacerOrderNumberUniversalId',
-        'PlacerOrderNumberUniversalIdType',
-        'FillerOrderNumberUniversalId',
-        'FillerOrderNumberUniversalIdType',
+        'PlacerOrderNumberUniversalID',
+        'PlacerOrderNumberUniversalIDType',
+        'FillerOrderNumberUniversalID',
+        'FillerOrderNumberUniversalIDType',
     ];
 
     constructor(values, configs, isSubComponent = false) {
@@ -98,12 +104,20 @@ export class OSD extends ComplexDataType {
         this.setComponentValue('PlacerOrderNumberEntityIdentifier', value);
     }
 
+    get PlacerOrderNumberNamespaceID() {
+        return this.getComponent('PlacerOrderNumberNamespaceID');
+    }
+
+    set PlacerOrderNumberNamespaceID(value) {
+        this.setComponentValue('PlacerOrderNumberNamespaceID', value);
+    }
+
     get PlacerOrderNumberNamespaceId() {
-        return this.getComponent('PlacerOrderNumberNamespaceId');
+        return this.getComponent('PlacerOrderNumberNamespaceID');
     }
 
     set PlacerOrderNumberNamespaceId(value) {
-        this.setComponentValue('PlacerOrderNumberNamespaceId', value);
+        this.setComponentValue('PlacerOrderNumberNamespaceID', value);
     }
 
     get FillerOrderNumberEntityIdentifier() {
@@ -114,12 +128,20 @@ export class OSD extends ComplexDataType {
         this.setComponentValue('FillerOrderNumberEntityIdentifier', value);
     }
 
+    get FillerOrderNumberNamespaceID() {
+        return this.getComponent('FillerOrderNumberNamespaceID');
+    }
+
+    set FillerOrderNumberNamespaceID(value) {
+        this.setComponentValue('FillerOrderNumberNamespaceID', value);
+    }
+
     get FillerOrderNumberNamespaceId() {
-        return this.getComponent('FillerOrderNumberNamespaceId');
+        return this.getComponent('FillerOrderNumberNamespaceID');
     }
 
     set FillerOrderNumberNamespaceId(value) {
-        this.setComponentValue('FillerOrderNumberNamespaceId', value);
+        this.setComponentValue('FillerOrderNumberNamespaceID', value);
     }
 
     get SequenceConditionValue() {
@@ -138,35 +160,67 @@ export class OSD extends ComplexDataType {
         this.setComponentValue('MaximumNumberOfRepeats', value);
     }
 
+    get PlacerOrderNumberUniversalID() {
+        return this.getComponent('PlacerOrderNumberUniversalID');
+    }
+
+    set PlacerOrderNumberUniversalID(value) {
+        this.setComponentValue('PlacerOrderNumberUniversalID', value);
+    }
+
     get PlacerOrderNumberUniversalId() {
-        return this.getComponent('PlacerOrderNumberUniversalId');
+        return this.getComponent('PlacerOrderNumberUniversalID');
     }
 
     set PlacerOrderNumberUniversalId(value) {
-        this.setComponentValue('PlacerOrderNumberUniversalId', value);
+        this.setComponentValue('PlacerOrderNumberUniversalID', value);
+    }
+
+    get PlacerOrderNumberUniversalIDType() {
+        return this.getComponent('PlacerOrderNumberUniversalIDType');
+    }
+
+    set PlacerOrderNumberUniversalIDType(value) {
+        this.setComponentValue('PlacerOrderNumberUniversalIDType', value);
     }
 
     get PlacerOrderNumberUniversalIdType() {
-        return this.getComponent('PlacerOrderNumberUniversalIdType');
+        return this.getComponent('PlacerOrderNumberUniversalIDType');
     }
 
     set PlacerOrderNumberUniversalIdType(value) {
-        this.setComponentValue('PlacerOrderNumberUniversalIdType', value);
+        this.setComponentValue('PlacerOrderNumberUniversalIDType', value);
+    }
+
+    get FillerOrderNumberUniversalID() {
+        return this.getComponent('FillerOrderNumberUniversalID');
+    }
+
+    set FillerOrderNumberUniversalID(value) {
+        this.setComponentValue('FillerOrderNumberUniversalID', value);
     }
 
     get FillerOrderNumberUniversalId() {
-        return this.getComponent('FillerOrderNumberUniversalId');
+        return this.getComponent('FillerOrderNumberUniversalID');
     }
 
     set FillerOrderNumberUniversalId(value) {
-        this.setComponentValue('FillerOrderNumberUniversalId', value);
+        this.setComponentValue('FillerOrderNumberUniversalID', value);
+    }
+
+    get FillerOrderNumberUniversalIDType() {
+        return this.getComponent('FillerOrderNumberUniversalIDType');
+    }
+
+    set FillerOrderNumberUniversalIDType(value) {
+        this.setComponentValue('FillerOrderNumberUniversalIDType', value);
     }
 
     get FillerOrderNumberUniversalIdType() {
-        return this.getComponent('FillerOrderNumberUniversalIdType');
+        return this.getComponent('FillerOrderNumberUniversalIDType');
     }
 
     set FillerOrderNumberUniversalIdType(value) {
-        this.setComponentValue('FillerOrderNumberUniversalIdType', value);
+        this.setComponentValue('FillerOrderNumberUniversalIDType', value);
     }
 }

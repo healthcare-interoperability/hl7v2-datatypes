@@ -17,6 +17,7 @@ export class PPN extends ComplexDataType {
             dataTypes: [{ dataType: ST, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
             position: 1,
         },
+        IDNumber: { aliasOf: 'PersonIdentifier' },
         IdNumber: { aliasOf: 'PersonIdentifier' },
         FamilyName: {
             defaultDataType: FN,
@@ -218,6 +219,14 @@ export class PPN extends ComplexDataType {
     }
 
     set PersonIdentifier(value) {
+        this.setComponentValue('PersonIdentifier', value);
+    }
+
+    get IDNumber() {
+        return this.getComponent('PersonIdentifier');
+    }
+
+    set IDNumber(value) {
         this.setComponentValue('PersonIdentifier', value);
     }
 

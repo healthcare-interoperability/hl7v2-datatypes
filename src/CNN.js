@@ -10,6 +10,7 @@ export class CNN extends ComplexDataType {
             dataTypes: [{ dataType: ST, versions: ['2.8', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
             position: 1,
         },
+        IDNumber: { aliasOf: 'IdNumber' },
         FamilyName: {
             defaultDataType: ST,
             dataTypes: [{ dataType: ST, versions: ['2.8', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -53,16 +54,19 @@ export class CNN extends ComplexDataType {
             dataTypes: [{ dataType: IS, versions: ['2.8', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
             position: 9,
         },
+        AssigningAuthorityNamespaceID: { aliasOf: 'AssigningAuthorityNamespaceId' },
         AssigningAuthorityUniversalId: {
             defaultDataType: ST,
             dataTypes: [{ dataType: ST, versions: ['2.8', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
             position: 10,
         },
+        AssigningAuthorityUniversalID: { aliasOf: 'AssigningAuthorityUniversalId' },
         AssigningAuthorityUniversalIdType: {
             defaultDataType: ID,
             dataTypes: [{ dataType: ID, versions: ['2.8', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
             position: 11,
         },
+        AssigningAuthorityUniversalIDType: { aliasOf: 'AssigningAuthorityUniversalIdType' },
     };
 
     static componentsByIndex = [
@@ -89,6 +93,14 @@ export class CNN extends ComplexDataType {
     }
 
     set IdNumber(value) {
+        this.setComponentValue('IdNumber', value);
+    }
+
+    get IDNumber() {
+        return this.getComponent('IdNumber');
+    }
+
+    set IDNumber(value) {
         this.setComponentValue('IdNumber', value);
     }
 
@@ -180,6 +192,14 @@ export class CNN extends ComplexDataType {
         this.setComponentValue('AssigningAuthorityNamespaceId', value);
     }
 
+    get AssigningAuthorityNamespaceID() {
+        return this.getComponent('AssigningAuthorityNamespaceId');
+    }
+
+    set AssigningAuthorityNamespaceID(value) {
+        this.setComponentValue('AssigningAuthorityNamespaceId', value);
+    }
+
     get AssigningAuthorityUniversalId() {
         return this.getComponent('AssigningAuthorityUniversalId');
     }
@@ -188,11 +208,27 @@ export class CNN extends ComplexDataType {
         this.setComponentValue('AssigningAuthorityUniversalId', value);
     }
 
+    get AssigningAuthorityUniversalID() {
+        return this.getComponent('AssigningAuthorityUniversalId');
+    }
+
+    set AssigningAuthorityUniversalID(value) {
+        this.setComponentValue('AssigningAuthorityUniversalId', value);
+    }
+
     get AssigningAuthorityUniversalIdType() {
         return this.getComponent('AssigningAuthorityUniversalIdType');
     }
 
     set AssigningAuthorityUniversalIdType(value) {
+        this.setComponentValue('AssigningAuthorityUniversalIdType', value);
+    }
+
+    get AssigningAuthorityUniversalIDType() {
+        return this.getComponent('AssigningAuthorityUniversalIdType');
+    }
+
+    set AssigningAuthorityUniversalIDType(value) {
         this.setComponentValue('AssigningAuthorityUniversalIdType', value);
     }
 }

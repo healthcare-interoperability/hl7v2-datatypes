@@ -5,12 +5,12 @@ import { DT } from './DT';
 
 export class CM_PLN extends ComplexDataType {
     static components = {
-        IdNumber: {
+        IDNumber: {
             defaultDataType: ST,
             dataTypes: [{ dataType: ST, versions: ['2.3'] }],
             position: 1,
         },
-        TypeOfIdNumber: {
+        TypeOfIDNumber: {
             defaultDataType: IS,
             dataTypes: [{ dataType: IS, versions: ['2.3'] }],
             position: 2,
@@ -27,26 +27,26 @@ export class CM_PLN extends ComplexDataType {
         },
     };
 
-    static componentsByIndex = ['', 'IdNumber', 'TypeOfIdNumber', 'StateOtherQualifyingInfo', 'ExpirationDate'];
+    static componentsByIndex = ['', 'IDNumber', 'TypeOfIDNumber', 'StateOtherQualifyingInfo', 'ExpirationDate'];
 
     constructor(values, configs, isSubComponent = false) {
         super(values, configs, isSubComponent);
     }
 
-    get IdNumber() {
-        return this.getComponent('IdNumber');
+    get IDNumber() {
+        return this.getComponent('IDNumber');
     }
 
-    set IdNumber(value) {
-        this.setComponentValue('IdNumber', value);
+    set IDNumber(value) {
+        this.setComponentValue('IDNumber', value);
     }
 
-    get TypeOfIdNumber() {
-        return this.getComponent('TypeOfIdNumber');
+    get TypeOfIDNumber() {
+        return this.getComponent('TypeOfIDNumber');
     }
 
-    set TypeOfIdNumber(value) {
-        this.setComponentValue('TypeOfIdNumber', value);
+    set TypeOfIDNumber(value) {
+        this.setComponentValue('TypeOfIDNumber', value);
     }
 
     get StateOtherQualifyingInfo() {

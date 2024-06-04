@@ -29,6 +29,7 @@ export class XON extends ComplexDataType {
             ],
             position: 3,
         },
+        IDNumber: { aliasOf: 'IdNumber' },
         IdentifierCheckDigit: {
             defaultDataType: ST,
             dataTypes: [
@@ -65,6 +66,7 @@ export class XON extends ComplexDataType {
             dataTypes: [{ dataType: HD, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
             position: 8,
         },
+        AssigningFacilityID: { aliasOf: 'AssigningFacility' },
         AssigningFacilityId: { aliasOf: 'AssigningFacility' },
         NameRepresentationCode: {
             defaultDataType: ID,
@@ -117,6 +119,14 @@ export class XON extends ComplexDataType {
     }
 
     set IdNumber(value) {
+        this.setComponentValue('IdNumber', value);
+    }
+
+    get IDNumber() {
+        return this.getComponent('IdNumber');
+    }
+
+    set IDNumber(value) {
         this.setComponentValue('IdNumber', value);
     }
 
@@ -173,6 +183,14 @@ export class XON extends ComplexDataType {
     }
 
     set AssigningFacility(value) {
+        this.setComponentValue('AssigningFacility', value);
+    }
+
+    get AssigningFacilityID() {
+        return this.getComponent('AssigningFacility');
+    }
+
+    set AssigningFacilityID(value) {
         this.setComponentValue('AssigningFacility', value);
     }
 

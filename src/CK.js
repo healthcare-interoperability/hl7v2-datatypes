@@ -6,11 +6,12 @@ import { HD } from './HD';
 
 export class CK extends ComplexDataType {
     static components = {
-        IdNumber: {
+        IDNumber: {
             defaultDataType: NM,
             dataTypes: [{ dataType: NM, versions: ['2.3', '2.3.1', '2.4'] }],
             position: 1,
         },
+        IdNumber: { aliasOf: 'IDNumber' },
         CheckDigit: {
             defaultDataType: ST,
             dataTypes: [
@@ -31,18 +32,26 @@ export class CK extends ComplexDataType {
         },
     };
 
-    static componentsByIndex = ['', 'IdNumber', 'CheckDigit', 'CodeIdentifyingTheCheckDigitSchemeEmployed', 'AssigningAuthority'];
+    static componentsByIndex = ['', 'IDNumber', 'CheckDigit', 'CodeIdentifyingTheCheckDigitSchemeEmployed', 'AssigningAuthority'];
 
     constructor(values, configs, isSubComponent = false) {
         super(values, configs, isSubComponent);
     }
 
+    get IDNumber() {
+        return this.getComponent('IDNumber');
+    }
+
+    set IDNumber(value) {
+        this.setComponentValue('IDNumber', value);
+    }
+
     get IdNumber() {
-        return this.getComponent('IdNumber');
+        return this.getComponent('IDNumber');
     }
 
     set IdNumber(value) {
-        this.setComponentValue('IdNumber', value);
+        this.setComponentValue('IDNumber', value);
     }
 
     get CheckDigit() {

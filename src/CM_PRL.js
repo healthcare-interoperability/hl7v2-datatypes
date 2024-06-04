@@ -5,50 +5,50 @@ import { TX } from './TX';
 
 export class CM_PRL extends ComplexDataType {
     static components = {
-        Obx3ObservationIdentifierOfParentResult: {
+        OBX3ObservationIdentifierOfParentResult: {
             defaultDataType: CE,
             dataTypes: [{ dataType: CE, versions: ['2.3'] }],
             position: 1,
         },
-        Obx4SubIdOfParentResult: {
+        OBX4SubIDOfParentResult: {
             defaultDataType: ST,
             dataTypes: [{ dataType: ST, versions: ['2.3'] }],
             position: 2,
         },
-        PartOfObx5ObservationResultFromParent: {
+        PartOfOBX5ObservationResultFromParent: {
             defaultDataType: TX,
             dataTypes: [{ dataType: TX, versions: ['2.3'] }],
             position: 3,
         },
     };
 
-    static componentsByIndex = ['', 'Obx3ObservationIdentifierOfParentResult', 'Obx4SubIdOfParentResult', 'PartOfObx5ObservationResultFromParent'];
+    static componentsByIndex = ['', 'OBX3ObservationIdentifierOfParentResult', 'OBX4SubIDOfParentResult', 'PartOfOBX5ObservationResultFromParent'];
 
     constructor(values, configs, isSubComponent = false) {
         super(values, configs, isSubComponent);
     }
 
-    get Obx3ObservationIdentifierOfParentResult() {
-        return this.getComponent('Obx3ObservationIdentifierOfParentResult');
+    get OBX3ObservationIdentifierOfParentResult() {
+        return this.getComponent('OBX3ObservationIdentifierOfParentResult');
     }
 
-    set Obx3ObservationIdentifierOfParentResult(value) {
-        this.setComponentValue('Obx3ObservationIdentifierOfParentResult', value);
+    set OBX3ObservationIdentifierOfParentResult(value) {
+        this.setComponentValue('OBX3ObservationIdentifierOfParentResult', value);
     }
 
-    get Obx4SubIdOfParentResult() {
-        return this.getComponent('Obx4SubIdOfParentResult');
+    get OBX4SubIDOfParentResult() {
+        return this.getComponent('OBX4SubIDOfParentResult');
     }
 
-    set Obx4SubIdOfParentResult(value) {
-        this.setComponentValue('Obx4SubIdOfParentResult', value);
+    set OBX4SubIDOfParentResult(value) {
+        this.setComponentValue('OBX4SubIDOfParentResult', value);
     }
 
-    get PartOfObx5ObservationResultFromParent() {
-        return this.getComponent('PartOfObx5ObservationResultFromParent');
+    get PartOfOBX5ObservationResultFromParent() {
+        return this.getComponent('PartOfOBX5ObservationResultFromParent');
     }
 
-    set PartOfObx5ObservationResultFromParent(value) {
-        this.setComponentValue('PartOfObx5ObservationResultFromParent', value);
+    set PartOfOBX5ObservationResultFromParent(value) {
+        this.setComponentValue('PartOfOBX5ObservationResultFromParent', value);
     }
 }

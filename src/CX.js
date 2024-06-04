@@ -13,6 +13,7 @@ export class CX extends ComplexDataType {
             dataTypes: [{ dataType: ST, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
             position: 1,
         },
+        ID: { aliasOf: 'IdNumber' },
         Id: { aliasOf: 'IdNumber' },
         IdentifierCheckDigit: {
             defaultDataType: ST,
@@ -101,6 +102,14 @@ export class CX extends ComplexDataType {
     }
 
     set IdNumber(value) {
+        this.setComponentValue('IdNumber', value);
+    }
+
+    get ID() {
+        return this.getComponent('IdNumber');
+    }
+
+    set ID(value) {
         this.setComponentValue('IdNumber', value);
     }
 

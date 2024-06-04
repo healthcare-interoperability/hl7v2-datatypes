@@ -14,19 +14,19 @@ export class PRL extends ComplexDataType {
             ],
             position: 1,
         },
-        Obx3ObservationIdentifierOfParentResult: { aliasOf: 'ParentObservationIdentifier' },
+        OBX3ObservationIdentifierOfParentResult: { aliasOf: 'ParentObservationIdentifier' },
         ParentObservationSubIdentifier: {
             defaultDataType: ST,
             dataTypes: [{ dataType: ST, versions: ['2.8', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
             position: 2,
         },
-        Obx4SubIdOfParentResult: { aliasOf: 'ParentObservationSubIdentifier' },
+        OBX4SubIDOfParentResult: { aliasOf: 'ParentObservationSubIdentifier' },
         ParentObservationValueDescriptor: {
             defaultDataType: TX,
             dataTypes: [{ dataType: TX, versions: ['2.8', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
             position: 3,
         },
-        PartOfObx5ObservationResultFromParent: { aliasOf: 'ParentObservationValueDescriptor' },
+        PartOfOBX5ObservationResultFromParent: { aliasOf: 'ParentObservationValueDescriptor' },
     };
 
     static componentsByIndex = ['', 'ParentObservationIdentifier', 'ParentObservationSubIdentifier', 'ParentObservationValueDescriptor'];
@@ -43,11 +43,11 @@ export class PRL extends ComplexDataType {
         this.setComponentValue('ParentObservationIdentifier', value);
     }
 
-    get Obx3ObservationIdentifierOfParentResult() {
+    get OBX3ObservationIdentifierOfParentResult() {
         return this.getComponent('ParentObservationIdentifier');
     }
 
-    set Obx3ObservationIdentifierOfParentResult(value) {
+    set OBX3ObservationIdentifierOfParentResult(value) {
         this.setComponentValue('ParentObservationIdentifier', value);
     }
 
@@ -59,11 +59,11 @@ export class PRL extends ComplexDataType {
         this.setComponentValue('ParentObservationSubIdentifier', value);
     }
 
-    get Obx4SubIdOfParentResult() {
+    get OBX4SubIDOfParentResult() {
         return this.getComponent('ParentObservationSubIdentifier');
     }
 
-    set Obx4SubIdOfParentResult(value) {
+    set OBX4SubIDOfParentResult(value) {
         this.setComponentValue('ParentObservationSubIdentifier', value);
     }
 
@@ -75,11 +75,11 @@ export class PRL extends ComplexDataType {
         this.setComponentValue('ParentObservationValueDescriptor', value);
     }
 
-    get PartOfObx5ObservationResultFromParent() {
+    get PartOfOBX5ObservationResultFromParent() {
         return this.getComponent('ParentObservationValueDescriptor');
     }
 
-    set PartOfObx5ObservationResultFromParent(value) {
+    set PartOfOBX5ObservationResultFromParent(value) {
         this.setComponentValue('ParentObservationValueDescriptor', value);
     }
 }

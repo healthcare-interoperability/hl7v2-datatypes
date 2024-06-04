@@ -49,11 +49,13 @@ export class CNE extends ComplexDataType {
             dataTypes: [{ dataType: ST, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
             position: 7,
         },
+        CodingSystemVersionID: { aliasOf: 'CodingSystemVersionId' },
         AlternateCodingSystemVersionId: {
             defaultDataType: ST,
             dataTypes: [{ dataType: ST, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
             position: 8,
         },
+        AlternateCodingSystemVersionID: { aliasOf: 'AlternateCodingSystemVersionId' },
         OriginalText: {
             defaultDataType: ST,
             dataTypes: [{ dataType: ST, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -212,11 +214,27 @@ export class CNE extends ComplexDataType {
         this.setComponentValue('CodingSystemVersionId', value);
     }
 
+    get CodingSystemVersionID() {
+        return this.getComponent('CodingSystemVersionId');
+    }
+
+    set CodingSystemVersionID(value) {
+        this.setComponentValue('CodingSystemVersionId', value);
+    }
+
     get AlternateCodingSystemVersionId() {
         return this.getComponent('AlternateCodingSystemVersionId');
     }
 
     set AlternateCodingSystemVersionId(value) {
+        this.setComponentValue('AlternateCodingSystemVersionId', value);
+    }
+
+    get AlternateCodingSystemVersionID() {
+        return this.getComponent('AlternateCodingSystemVersionId');
+    }
+
+    set AlternateCodingSystemVersionID(value) {
         this.setComponentValue('AlternateCodingSystemVersionId', value);
     }
 
