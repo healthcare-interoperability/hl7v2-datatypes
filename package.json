@@ -16,6 +16,6 @@
     "@babel/preset-env": "^7.21.4"
   },
   "dependencies": {
-    "@healthcare-interoperability/hl7v2-core": "^1.1.0"
+    "@healthcare-interoperability/hl7v2-core": "^1.2.0"
   }
 }
